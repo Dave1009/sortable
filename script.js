@@ -11,7 +11,7 @@
   let timeInterval;
   numberArr.push(number);
   shuffledArr.push(number);
-  
+
   // Проверка на Массив есть ли он в localeStorage или нет
 
   if (!localStorage.getItem("UserAnswer")) {
@@ -35,7 +35,6 @@
 
       content.append(div);
     }
-
   } else {
     let arrFromLocaleStorage = JSON.parse(localStorage.getItem("UserAnswer"));
     let timeFromLocaleStorage = +localStorage.getItem("Time");
@@ -59,7 +58,7 @@
 
   function submitHandler() {
     userArr.length = 0;
-    let correctArr = JSON.parse(localStorage.getItem('correctArr'))
+    let correctArr = JSON.parse(localStorage.getItem("correctArr"));
 
     $(".content__item").each(function (idx, item) {
       userArr.push(+item.getAttribute("data-idx"));
@@ -70,7 +69,6 @@
         rightAnswerP++;
       }
     }
-
 
     rightAnswerP = rightAnswerP / 10;
 
@@ -85,8 +83,6 @@
     localStorage.clear();
     console.log(finalArr);
   }
-
-
 
   $(content).sortable({
     axis: "x",
@@ -128,5 +124,5 @@
   }
 })();
 
-let i = 0
-i++
+let a = 0;
+a++;
